@@ -12,7 +12,10 @@ public class PartidaMapper {
         return new Partida(
                 partidaRequisicaoDto.adversario(),
                 partidaRequisicaoDto.estadio(),
-                partidaRequisicaoDto.placar()
+                partidaRequisicaoDto.placar(),
+                partidaRequisicaoDto.competicao(),
+                partidaRequisicaoDto.tipo(),
+                partidaRequisicaoDto.totalIngressoDisponivel()
         );
     }
 
@@ -21,7 +24,10 @@ public class PartidaMapper {
                 partida.getId(),
                 partida.getAdversario(),
                 partida.getEstadio(),
-                partida.getPlacar()
+                partida.getPlacar(),
+                partida.getCompeticao(),
+                partida.getTipo(),
+                partida.getTotalIngressoDisponivel()
         );
     }
 }

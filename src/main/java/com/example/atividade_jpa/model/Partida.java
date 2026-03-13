@@ -27,9 +27,18 @@ public class Partida {
     @Column(nullable = false)
     private String placar;
 
-    public Partida(String adversario, String estadio, String placar) {
+    private String competicao;
+
+    private String tipo;
+
+    private String totalIngressoDisponivel;
+
+    public Partida(String adversario, String estadio, String placar, String competicao, String tipo, String totalIngressoDisponivel) {
         this.adversario = adversario;
         this.estadio = estadio;
         this.placar = placar;
+        this.competicao = competicao;
+        this.tipo = tipo;
+        this.totalIngressoDisponivel = totalIngressoDisponivel;
     }
 }
