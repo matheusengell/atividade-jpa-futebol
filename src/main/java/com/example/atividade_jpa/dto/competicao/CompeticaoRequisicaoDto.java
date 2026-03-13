@@ -11,7 +11,10 @@ public record CompeticaoRequisicaoDto(
         int ano,
 
         @NotBlank(message = "O organizador é obrigatório")
-        String organizador
+        String organizador,
 
+        String tipoCompeticao,
+        String tempoDuracao,
+        double premiacao
 ) {
 }

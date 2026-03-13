@@ -13,7 +13,10 @@ public class CompeticaoMapper {
         return new Competicao(
                 competicaoRequisicaoDto.nome(),
                 competicaoRequisicaoDto.ano(),
-                competicaoRequisicaoDto.organizador()
+                competicaoRequisicaoDto.organizador(),
+                competicaoRequisicaoDto.tipoCompeticao(),
+                competicaoRequisicaoDto.tempoDuracao(),
+                competicaoRequisicaoDto.premiacao()
         );
     }
 
@@ -22,7 +25,10 @@ public class CompeticaoMapper {
                 competicao.getId(),
                 competicao.getNome(),
                 competicao.getAno(),
-                competicao.getOrganizador()
+                competicao.getOrganizador(),
+                competicao.getTipoCompeticao(),
+                competicao.getTempoDuracao(),
+                competicao.getPremiacao()
         );
     }
 

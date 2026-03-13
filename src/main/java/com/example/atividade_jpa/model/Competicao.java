@@ -29,10 +29,18 @@ public class Competicao {
     @Column (nullable = false)
     private String organizador;
 
+    private String tipoCompeticao;
 
-    public Competicao(String nome, int ano, String organizador) {
+    private String tempoDuracao;
+
+    private double premiacao;
+
+    public Competicao(String nome, int ano, String organizador, String tipoCompeticao, String tempoDuracao, double premiacao) {
         this.nome = nome;
         this.ano = ano;
         this.organizador = organizador;
+        this.tipoCompeticao = tipoCompeticao;
+        this.tempoDuracao = tempoDuracao;
+        this.premiacao = premiacao;
     }
 }
