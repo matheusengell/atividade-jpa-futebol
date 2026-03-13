@@ -12,6 +12,8 @@ public class SocioTorcedorMapper {
         socio.setNome(dto.nome());
         socio.setCpf(dto.cpf());
         socio.setPlano(dto.plano());
+        socio.setValorMensalidade(dto.valorMensalidade());
+        socio.setEstaAtivo(dto.estaAtivo());
 
         return socio;
     }
@@ -21,7 +23,9 @@ public class SocioTorcedorMapper {
                socioTorcedor.getId(),
                 socioTorcedor.getNome(),
                 socioTorcedor.getCpf(),
-                socioTorcedor.getPlano()
+                socioTorcedor.getPlano(),
+                socioTorcedor.getValorMensalidade(),
+                socioTorcedor.isEstaAtivo()
         );
     }
 

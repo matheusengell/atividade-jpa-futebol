@@ -23,4 +23,7 @@ public class SocioTorcedor {
     @Column(nullable = false)
     private String plano;
 
+    private double valorMensalidade;
+    private boolean estaAtivo;
+
 }

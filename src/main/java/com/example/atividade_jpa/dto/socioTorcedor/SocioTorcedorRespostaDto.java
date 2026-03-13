@@ -4,6 +4,8 @@ public record SocioTorcedorRespostaDto(
         Long id,
         String nome,
         String cpf,
-        String plano
+        String plano,
+        double valorMensalidade,
+        boolean estaAtivo
 ) {
 }
