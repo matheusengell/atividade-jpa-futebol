@@ -1,4 +1,7 @@
 package com.example.atividade_jpa.repository;
 
-public interface SocioTorcedorRepository {
+import com.example.atividade_jpa.model.SocioTorcedor;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SocioTorcedorRepository extends JpaRepository<SocioTorcedor, Long> {
 }
