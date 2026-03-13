@@ -1,4 +1,7 @@
 package com.example.atividade_jpa.repository;
 
-public interface PartidaRepository {
+import com.example.atividade_jpa.model.Partida;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PartidaRepository extends JpaRepository<Partida, Long> {
 }
