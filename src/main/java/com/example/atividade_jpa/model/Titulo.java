@@ -28,4 +28,9 @@ public class Titulo {
 
     @Column(nullable = false)
     private int ano;
+
+    private String edicao;
+    private String cidadeSede;
+    private String adversarioFinal;
+    private int publicoPresente;
 }

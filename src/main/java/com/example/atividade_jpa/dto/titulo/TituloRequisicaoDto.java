@@ -3,6 +3,9 @@ package com.example.atividade_jpa.dto.titulo;
 public record TituloRequisicaoDto(
         String nome,
         int ano,
-        Long idCompeticao
+        String edicao,
+        String cidadeSede,
+        String adversarioFinal,
+        int publicoPresente
 ) {
 }

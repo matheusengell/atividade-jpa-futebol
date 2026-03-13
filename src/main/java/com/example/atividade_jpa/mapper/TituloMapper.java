@@ -12,6 +12,10 @@ public class TituloMapper {
         Titulo titulo = new Titulo();
         titulo.setNome(dto.nome());
         titulo.setAno(dto.ano());
+        titulo.setEdicao(dto.edicao());
+        titulo.setCidadeSede(dto.cidadeSede());
+        titulo.setAdversarioFinal(dto.adversarioFinal());
+        titulo.setPublicoPresente(dto.publicoPresente());
         return titulo;
     }
 
@@ -19,7 +23,11 @@ public class TituloMapper {
         return new TituloRespostaDto(
                 titulo.getId(),
                 titulo.getNome(),
-                titulo.getAno()
+                titulo.getAno(),
+                titulo.getEdicao(),
+                titulo.getCidadeSede(),
+                titulo.getAdversarioFinal(),
+                titulo.getPublicoPresente()
         );
     }
 }
