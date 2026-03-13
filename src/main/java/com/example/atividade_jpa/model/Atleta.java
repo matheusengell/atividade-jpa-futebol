@@ -23,12 +23,25 @@ public class Atleta {
     @Column(nullable = false)
     private String posicao;
 
-    @Column
+    @Column(nullable = false)
     private String clube;
 
-    public Atleta(String nome, String posicao, String clube) {
+    @Column(nullable = false)
+    private int idade;
+
+    @Column(nullable = false)
+    private int jogosCarreira;
+
+    @Column(nullable = false)
+    private boolean aposentado;
+
+
+    public Atleta(String nome, String posicao, String clube, int idade, int jogosCarreira, boolean aposentado) {
         this.nome = nome;
         this.posicao = posicao;
         this.clube = clube;
+        this.idade = idade;
+        this.jogosCarreira = jogosCarreira;
+        this.aposentado = aposentado;
     }
 }

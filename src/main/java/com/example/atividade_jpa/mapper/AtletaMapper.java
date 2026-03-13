@@ -12,7 +12,10 @@ public Atleta paraEntidade(AtletaRequisicaoDto atletaRequisicaoDto){
 return new Atleta(
         atletaRequisicaoDto.nome(),
         atletaRequisicaoDto.posicao(),
-        atletaRequisicaoDto.clube()
+        atletaRequisicaoDto.clube(),
+        atletaRequisicaoDto.idade(),
+        atletaRequisicaoDto.jogosCarreira(),
+        atletaRequisicaoDto.aposentado()
 );
 }
 
@@ -21,7 +24,10 @@ public AtletaRespostaDto paraDto(Atleta atleta){
             atleta.getId(),
             atleta.getNome(),
             atleta.getPosicao(),
-            atleta.getClube()
+            atleta.getClube(),
+            atleta.getIdade(),
+            atleta.getJogosCarreira(),
+            atleta.isAposentado()
     );
 }
 
