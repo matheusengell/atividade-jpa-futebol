@@ -1,4 +1,7 @@
 package com.example.atividade_jpa.repository;
 
-public interface CompeticaoRepository {
+import com.example.atividade_jpa.model.Competicao;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CompeticaoRepository extends JpaRepository<Competicao, Long> {
 }
