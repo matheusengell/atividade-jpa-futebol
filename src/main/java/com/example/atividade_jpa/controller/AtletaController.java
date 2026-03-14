@@ -47,6 +47,20 @@ public class AtletaController {
         }
     }
 
+
+    @GetMapping("/filtro")
+    public List<AtletaRespostaDto> listarPorNomeClubePosicao(
+            @RequestParam String nome,
+            @RequestParam List<String> clube,
+            @RequestParam List<String> posicao
+    ){
+        try {
+            return atletaService.listarPorNomeClubePosicao(nome, clube, posicao);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     @PutMapping("/{id}")
     public AtletaRespostaDto atualizar(@RequestBody AtletaRequisicaoDto atletaRequisicaoDto, @PathVariable long id){
         try {

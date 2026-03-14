@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -52,6 +53,14 @@ public class AtletaService {
 
     public void deletar(long id)throws SQLException{
         atletaRepository.deleteById(id);
+    }
+
+    public List<AtletaRespostaDto> listarPorNomeClubePosicao(String nome, List<String> clube, List<String> posicao) throws SQLException {
+        List<Atleta> atletas = atletaRepository.findByNomeAndClubeInAndPosicaoIn(nome, clube, posicao);
+
+        return atletas.stream()
+                .map(atleta -> atletaMapper.paraDto(atleta))
+                .toList();
     }
 
 }
